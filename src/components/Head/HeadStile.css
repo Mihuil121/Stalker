@@ -1,0 +1,98 @@
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-img {
+    margin: 1rem 1rem;
+}
+
+.imgHead {
+    margin-left: 1rem;
+}
+
+.stalker {
+    width: 7rem;
+}
+
+.head-left {
+    display: flex;
+    flex-grow: 1;
+}
+
+
+.scrol {
+    margin-left: 25.5vw;
+    justify-content: center;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-head {
+    position: relative;
+    margin-right: 1rem;
+    color: rgb(233, 233, 233);
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-head::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffaa2b;
+    /* Цвет подчеркивания */
+    transform: translateX(-50%) scaleX(0);
+    /* Начальное состояние (скрыто) */
+    transition: transform 0.3s ease;
+    /* Плавный переход */
+}
+
+.text-head:hover {
+    color: #ffffff;
+}
+
+.text-head:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    /* Показать подчеркивание при наведении */
+}
+
+
+.icon-head {
+    margin: 1rem 1rem;
+    background-color: rgb(255, 241, 223);
+    align-items: center;
+    display: flex;
+    color: #000000;
+    height: 2rem;
+    border-radius: 0.3dvh;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+
+}
+
+.svg {
+    align-items: center;
+    background: #ffaa2b;
+    border-top-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    height: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.svg-1 {
+    background: #ffaa2b;
+    height: 2rem;
+    border-radius: 0.2rem;
+}
