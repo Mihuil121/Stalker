@@ -1,0 +1,41 @@
+.Expl-div {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: 10rem;
+}
+
+
+.expl-conten {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.button-expl {
+    display: flex;
+    justify-content: center;
+}
+
+.button01 {
+    margin: 2rem 1rem;
+}
+
+.button0 {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ee991a;
+    border: none; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    width: 12rem;
+    height: 2rem;
+    cursor: pointer; 
+}
+
+.button0-text {
+    font-size: 1rem;
+    text-align: center;
+}
+    
