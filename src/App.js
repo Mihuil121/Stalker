@@ -5,8 +5,42 @@ import Explanation from './components/body/Explanation/Explanation.tsx';
 function App() {
   return (
     <div className="App">
-    <Head/>
-    <Explanation/>
+       <Head />
+      <div className="background"></div> 
+     
+      <Explanation />
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
+      <div>....</div>
     </div>
   );
 }

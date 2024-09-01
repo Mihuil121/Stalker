@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { photo, Photo, ILinl, linkDom } from './head.ts'
 import { ShoppingCart } from 'lucide-react';
 import './HeadStile.css'
+import useStore from '../../Store.js';
 
 interface IHead {
     transform: string,
 }
+interface IBackground {
+    backgroundColor: string
+}
 
 const Head: React.FC = () => {
+    const {Toss} = useStore()
+    const [background, setBackground] = useState<IBackground>({
+        backgroundColor: 'rgba(0, 0, 0, 0)'
+    })
     const [mous, setMous] = useState<IHead>({
         transform: 'translateX(0)'
     })
@@ -21,9 +29,26 @@ const Head: React.FC = () => {
             transform: 'translateX(0)'
         })
     }
+
+    useEffect(() => {
+        const ColorBackground = () => {
+            const scrollPosition: number = document.documentElement.scrollTop;
+            scrollPosition < 2 ? setBackground({
+                backgroundColor: 'rgba(0, 0, 0, 0)'
+            }) : setBackground({
+                backgroundColor: 'rgba(0, 0, 0)'
+            })
+        }
+        window.addEventListener('scroll', ColorBackground)
+        return () => {
+            window.removeEventListener('scroll', ColorBackground);
+        }
+
+    }, [])
+
     return (
         <div>
-            <div className='head'>
+            <div className='head' style={background}>
                 <div className="head-left">
                     <div className="head-img" style={{ display: 'flex' }}>
                         {photo.map((Itext: Photo, index: number) => (
@@ -40,7 +65,7 @@ const Head: React.FC = () => {
 
                     </div>
                 </div>
-                <div className='icon-head' onMouseEnter={hendelMous} onMouseLeave={hendelMousLeave} onClick={() => window.open(linkDom[0].link)}>
+                <div className='icon-head' onMouseEnter={hendelMous} onMouseLeave={hendelMousLeave} onClick={Toss}>
                     <div className="svg-1">
                         <div className="svg" style={{ transform: mous.transform }}>
                             <ShoppingCart />
