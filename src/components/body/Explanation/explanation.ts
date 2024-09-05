@@ -21,7 +21,7 @@ export const textExpl:ITextExpl[] = [
         
     },
     {
-        text:'в желаемое!export '
+        text:'в желаемое!'
         
     },
 ]

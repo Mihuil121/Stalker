@@ -1,8 +1,17 @@
 import { create } from "zustand";
+import {links} from './store/LinckStoe/Linck.ts'
 
 const useStore = create((set, get) => ({
-    URL: 'https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/',
-    Toss: () => { window.open(get().URL) }
+    URL: null,
+    count: null,
+    Toss: () => { window.open(get().URL) },
+    newCount: (id) => set(()=>({ count: id })),
+    newUrl: () => {
+        const count = get().count; 
+        const link = links[count]?.link;
+        set({ URL: link }); 
+    }
+    
 }))
 
 export default useStore;

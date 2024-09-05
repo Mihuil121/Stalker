@@ -12,7 +12,7 @@ interface IBackground {
 }
 
 const Head: React.FC = () => {
-    const {Toss} = useStore()
+    const { Toss, newCount, count, newUrl } = useStore()
     const [background, setBackground] = useState<IBackground>({
         backgroundColor: 'rgba(0, 0, 0, 0)'
     })
@@ -46,6 +46,12 @@ const Head: React.FC = () => {
 
     }, [])
 
+    const hendelClick = (id: number) => {
+        newCount(id);
+        newUrl();
+        Toss();
+    }
+
     return (
         <div>
             <div className='head' style={background}>
@@ -65,13 +71,17 @@ const Head: React.FC = () => {
 
                     </div>
                 </div>
-                <div className='icon-head' onMouseEnter={hendelMous} onMouseLeave={hendelMousLeave} onClick={Toss}>
+                <div className='icon-head' onMouseEnter={hendelMous} onMouseLeave={hendelMousLeave} id='1' onClick={() => {
+                    hendelClick(0);
+                       
+                }}>
                     <div className="svg-1">
                         <div className="svg" style={{ transform: mous.transform }}>
                             <ShoppingCart />
                         </div>
                     </div>
-                    <p style={{ margin: '0.5rem', }}>оформить предзаказ </p>
+                    <p style={{ margin: '0.5rem', }}>оформить предзаказ  </p>
+
                 </div>
             </div>
 
