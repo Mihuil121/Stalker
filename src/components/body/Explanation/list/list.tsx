@@ -3,7 +3,7 @@ import React from 'react'
 const list:React.FC = () => {
   return (
     <div>
-        sss
+        sssвв
     </div>
   )
 }
