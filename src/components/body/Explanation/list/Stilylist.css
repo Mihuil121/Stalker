@@ -1,0 +1,32 @@
+.texturl {
+    position: absolute;
+    background-color: rgb(70, 70, 70);
+    margin-top: -0.5rem;
+    width: 12rem;
+}
+
+.divListtext {
+    display: flex;
+    align-items: center;
+    margin: -0.5rem 0rem;
+}
+
+.text {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.urltext {
+    color: rgb(201, 199, 196);
+    margin-left: 0.5rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.urltext:hover {
+    color: rgb(252, 251, 250);
+}
