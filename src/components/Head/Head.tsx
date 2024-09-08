@@ -3,18 +3,19 @@ import { photo, Photo, ILinl, linkDom } from './head.ts'
 import { ShoppingCart } from 'lucide-react';
 import './HeadStile.css'
 import useStore from '../../Store.js';
+import BorerOre from '../../img/orange-preorder.svg'
 
 interface IHead {
     transform: string,
 }
 interface IBackground {
-    backgroundColor: string
+    background: string
 }
 
 const Head: React.FC = () => {
     const { Toss, newCount, count, newUrl } = useStore()
     const [background, setBackground] = useState<IBackground>({
-        backgroundColor: 'rgba(0, 0, 0, 0)'
+        background: 'rgba(0, 0, 0, 0)'
     })
     const [mous, setMous] = useState<IHead>({
         transform: 'translateX(0)'
@@ -34,9 +35,9 @@ const Head: React.FC = () => {
         const ColorBackground = () => {
             const scrollPosition: number = document.documentElement.scrollTop;
             scrollPosition < 2 ? setBackground({
-                backgroundColor: 'rgba(0, 0, 0, 0)'
+                background: 'rgba(0, 0, 0, 0)'
             }) : setBackground({
-                backgroundColor: 'rgba(0, 0, 0)'
+                background: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 90%)'
             })
         }
         window.addEventListener('scroll', ColorBackground)
@@ -75,7 +76,8 @@ const Head: React.FC = () => {
                     hendelClick(0);
                        
                 }}>
-                    <div className="svg-1">
+                    <div className="svg-1"style={{display:"flex"}}>
+                       
                         <div className="svg" style={{ transform: mous.transform }}>
                             <ShoppingCart />
                         </div>

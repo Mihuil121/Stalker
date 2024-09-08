@@ -1,0 +1,33 @@
+.Heart {
+    background: url('../../../img/bg.webp');
+}
+
+.mainH {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    align-items: center;
+}
+
+.imgH {
+    width: 20%;
+    margin-bottom: 2rem;
+}
+
+.Heart-text-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textH {
+    width: 40%;
+    font-size: 0.9rem;
+
+}

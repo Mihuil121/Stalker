@@ -85,8 +85,9 @@
     background: #ffaa2b;
     border-top-left-radius: 0.2rem;
     border-bottom-right-radius: 0.2rem;
-    height: 2rem;
+    height: 1rem;
     transition: transform 0.2s ease;
+    margin: 0.2rem 1rem;
   }
   
   .svg-1 {
