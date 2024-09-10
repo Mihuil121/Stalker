@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './HeartSryle.css'
 import { heartText, IHeartText } from './Heart.ts'
 import photo from '../../../img/radiation-line.svg'
-import videeo from '../../../video/preview.webm'
+import { useStore2 } from '../../../Store.js'
 
 const Heart: React.FC = () => {
+
+    const videoRef: any = useRef()
+    const { setVideoRef, useFullScreen, Video } = useStore2();
+
+    useEffect(() => {
+        setVideoRef(videoRef.current)
+    }, [setVideoRef])
+
     return (
         <div>
             <div className="Heart">
@@ -22,13 +30,13 @@ const Heart: React.FC = () => {
                                     {
                                         index !== 1 ? (
                                             <div className="text-heartText-1" style={{ color: 'rgb(255, 190, 105)' }}>
-                                                <ol>
+                                                <ul>
                                                     <li>
                                                         <p>
                                                             {text.text}
                                                         </p>
                                                     </li>
-                                                </ol>
+                                                </ul>
                                             </div>
                                         ) : (
                                             <div className="text-heartText-2" style={{ color: 'white' }}>
@@ -43,8 +51,13 @@ const Heart: React.FC = () => {
                         ))}
 
                     </div>
-                    <video width="320" height="240" controls>
-                        <source src={videeo} type="video/mp4" />
+                    <video
+                        ref={videoRef}
+                        className='video'
+                        autoPlay loop muted
+                        onClick={useFullScreen}
+                    >
+                        <source src={Video} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>

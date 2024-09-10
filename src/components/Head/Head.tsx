@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { photo, Photo, ILinl, linkDom } from './head.ts'
 import { ShoppingCart } from 'lucide-react';
 import './HeadStile.css'
-import useStore from '../../Store.js';
+import { useStore } from '../../Store.js';
 import BorerOre from '../../img/orange-preorder.svg'
 
 interface IHead {
@@ -74,10 +74,10 @@ const Head: React.FC = () => {
                 </div>
                 <div className='icon-head' onMouseEnter={hendelMous} onMouseLeave={hendelMousLeave} id='1' onClick={() => {
                     hendelClick(0);
-                       
+
                 }}>
-                    <div className="svg-1"style={{display:"flex"}}>
-                       
+                    <div className="svg-1" style={{ display: "flex" }}>
+
                         <div className="svg" style={{ transform: mous.transform }}>
                             <ShoppingCart />
                         </div>

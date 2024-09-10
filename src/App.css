@@ -5,7 +5,7 @@
 
 body {
   background-attachment: scroll; /* Позволяем фону двигаться вместе с прокруткой */
-  background: url('./img/s-t-a-l-k-e-r-2-heart-of-chernobyl-serdtse-chernobylia-s-t-a-3181451180.webp');
+  background: url('./img/s-t-a-l-k-e-r-2-heart-of-chernobyl-serdtse-chernobylia-s-t-a-3181451181.jpg');
   background-repeat: no-repeat;
   background-size: cover; /* Полное отображение изображения */
   background-position: center; /* Центрируем изображение */
@@ -16,5 +16,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+
   
 }

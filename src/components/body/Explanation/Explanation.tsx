@@ -4,7 +4,7 @@ import { IExplPhoto, photoExpl, textExpl, ITextExpl } from './explanation.ts'
 import './Expl.css'
 import { linkDom, ILinl } from '../../Head/head.ts'
 import photoSteam from '../../../img/400px-Steam-logo-1436366131.png'
-import useStore from '../../../Store.js';
+import {useStore} from '../../../Store.js';
 import List from './list/list.tsx';
 const Explanation: React.FC = () => {
     const [hoverElement, setHoverElement] = useState<JSX.Element | null>(null)
