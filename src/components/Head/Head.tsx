@@ -3,7 +3,7 @@ import { photo, Photo, ILinl, linkDom } from './head.ts'
 import { ShoppingCart } from 'lucide-react';
 import './HeadStile.css'
 import { useStore } from '../../Store.js';
-import BorerOre from '../../img/orange-preorder.svg'
+import favorite from '../../img/favorite.svg'
 
 interface IHead {
     transform: string,
@@ -82,6 +82,7 @@ const Head: React.FC = () => {
                             <ShoppingCart />
                         </div>
                     </div>
+
                     <p style={{ margin: '0.5rem', }}>оформить предзаказ  </p>
 
                 </div>

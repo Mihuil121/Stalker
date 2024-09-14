@@ -1,11 +1,15 @@
-import React, { useState,CSSProperties } from 'react'
+import React, { useState, CSSProperties } from 'react'
 import { ShoppingCart } from 'lucide-react';
 import { IExplPhoto, photoExpl, textExpl, ITextExpl } from './explanation.ts'
 import './Expl.css'
 import { linkDom, ILinl } from '../../Head/head.ts'
 import photoSteam from '../../../img/400px-Steam-logo-1436366131.png'
-import {useStore} from '../../../Store.js';
+import { useStore } from '../../../Store.js';
 import List from './list/list.tsx';
+import favorite from '../../../img/favorite.svg'
+import favorite1 from '../../../img/arrow-down-white.svg'
+
+
 const Explanation: React.FC = () => {
     const [hoverElement, setHoverElement] = useState<JSX.Element | null>(null)
     const [isHovered, setIsHovered] = useState(false);
@@ -64,13 +68,15 @@ const Explanation: React.FC = () => {
                             ) : (
                                 <div key={index} className="button01" style={{ position: 'relative' }}>
                                     <button className='button1' onMouseEnter={handleHover} onMouseLeave={handleHoverLeave}>
+                                        <img src={favorite} alt="favorite" style={{marginRight:'0.5rem'}}/>
                                         <p className='button1-text'>
                                             {text.text}
                                         </p>
+                                        <img src={favorite1} alt="favorite1" style={{marginLeft:'1rem'}}/>
                                     </button>
-                                    <div 
+                                    <div
                                         style={hoverElementStyle}
-                                        onMouseEnter={handleHover} 
+                                        onMouseEnter={handleHover}
                                         onMouseLeave={handleHoverLeave}
                                     >
                                         {hoverElement}

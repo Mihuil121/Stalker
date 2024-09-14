@@ -3,10 +3,12 @@ import './HeartSryle.css'
 import { heartText, IHeartText } from './Heart.ts'
 import photo from '../../../img/radiation-line.svg'
 import { useStore2 } from '../../../Store.js'
+import photoPop from '../../../img/pop.png'
+import Signal from './signal/Signal.tsx'
 
 const Heart: React.FC = () => {
 
-    const videoRef: any = useRef()
+    const videoRef: any = useRef<undefined>()
     const { setVideoRef, useFullScreen, Video } = useStore2();
 
     useEffect(() => {
@@ -58,10 +60,18 @@ const Heart: React.FC = () => {
                         onClick={useFullScreen}
                     >
                         <source src={Video} type="video/mp4" />
-                        Your browser does not support the video tag.
+
                     </video>
+
+                </div>
+                <div className="pop" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img src={photoPop} alt="photoPop" className='popi' />
+                </div>
+                <div className="SignalSi">
+                    <Signal />
                 </div>
             </div>
+
         </div>
     )
 }

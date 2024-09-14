@@ -36,5 +36,15 @@
 .video{
     width: 35rem;
     margin-left: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.popi{
+    width: 50rem;
+}
+
+.SignalSi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
