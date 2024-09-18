@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { links } from './store/LinckStoe/Linck.ts'
 import video from './video/preview.webm'
+import { videoy } from "./store/Video/video.ts";
 
 const useStore = create((set, get) => ({
     URL: null,
@@ -36,4 +37,15 @@ const useStore2 = create((set, get) => ({
 
 }))
 
-export { useStore, useStore2 };
+const useScreenAndVideo = create((set,get)=>({
+    VideoOne: null,
+    count: null,
+    newCount: (id) => set(() => ({ count: id })),
+    newVideo: () => {
+        const count = get().count;
+        const vid = videoy[count]?.videos;
+        set({ VideoOne: vid });
+    }
+}))
+
+export { useStore, useStore2,useScreenAndVideo };

@@ -99,6 +99,8 @@
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; 
+    box-sizing: border-box; 
 }
 
 .custom-checkbox input[type="checkbox"]:checked + .square {
@@ -106,6 +108,7 @@
     transform: scale(1.1);
     border-radius: 0.1rem;
 }
+
 
 .PodSign {
     color: #f2e8d9;

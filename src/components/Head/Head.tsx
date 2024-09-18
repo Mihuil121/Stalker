@@ -4,6 +4,7 @@ import { ShoppingCart } from 'lucide-react';
 import './HeadStile.css'
 import { useStore } from '../../Store.js';
 import favorite from '../../img/favorite.svg'
+import Snowfall from 'react-snowfall'
 
 interface IHead {
     transform: string,
@@ -55,6 +56,7 @@ const Head: React.FC = () => {
 
     return (
         <div>
+         <Snowfall  snowflakeCount={3}/>
             <div className='head' style={background}>
                 <div className="head-left">
                     <div className="head-img" style={{ display: 'flex' }}>
