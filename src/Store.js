@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { links } from './store/LinckStoe/Linck.ts'
 import video from './video/preview.webm'
 import { videoy } from "./store/Video/video.ts";
+import { screenPhoto } from "./components/body/Screene/Screen.ts";
 
 const useStore = create((set, get) => ({
     URL: null,
@@ -48,4 +49,53 @@ const useScreenAndVideo = create((set,get)=>({
     }
 }))
 
-export { useStore, useStore2,useScreenAndVideo };
+const useImageStore = create((set, get) => ({
+    imageRef: null, 
+    fullScreenImage: null, 
+    setImageRef: (ref) => set({ imageRef: ref }), 
+    openFullScreen: (image) => {
+        set({ fullScreenImage: image });
+        const imgElement = document.createElement('img');
+        imgElement.src = image;
+        imgElement.style.width = '100%';
+        imgElement.style.height = '100%';
+        imgElement.style.objectFit = 'contain';
+        imgElement.style.position = 'fixed'; 
+        imgElement.style.top = '0';
+        imgElement.style.left = '0';
+        imgElement.style.zIndex = '1000'; 
+        imgElement.onclick = () => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+            set({ fullScreenImage: null });
+        };
+
+        document.body.appendChild(imgElement); 
+
+        const removeImage = () => {
+            if (!document.fullscreenElement) {
+                
+                if (imgElement.parentNode) {
+                    imgElement.parentNode.removeChild(imgElement);
+                }
+                document.removeEventListener('fullscreenchange', removeImage);
+                set({ fullScreenImage: null });
+            }
+        };
+
+        document.addEventListener('fullscreenchange', removeImage); 
+
+        if (imgElement.requestFullscreen) {
+            imgElement.requestFullscreen(); 
+        } else if (imgElement.mozRequestFullScreen) {
+            imgElement.mozRequestFullScreen(); 
+        } else if (imgElement.webkitRequestFullscreen) {
+            imgElement.webkitRequestFullscreen(); 
+        } else if (imgElement.msRequestFullscreen) {
+            imgElement.msRequestFullscreen(); 
+        }
+    },
+}));
+
+export { useStore, useStore2,useScreenAndVideo,useImageStore };

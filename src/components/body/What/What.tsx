@@ -12,12 +12,12 @@ const What: React.FC<TWhat> = () => {
 
     const handleMouseEnter = (index: number) => {
         setHoveredIndex(index);
-        newCount(index);  
-        newVideo();       
+        newCount(index);
+        newVideo();
     };
 
     const handleMouseLeave = () => {
-        setHoveredIndex(null); 
+        setHoveredIndex(null);
     };
 
     return (
@@ -41,9 +41,9 @@ const What: React.FC<TWhat> = () => {
                                         >
                                             {hoveredIndex === index ? (
                                                 <video
-                                                    src={VideoOne}  
-                                                     className='videoWhat'
-                                                     
+                                                    src={VideoOne}
+                                                    className='videoWhat'
+
                                                     autoPlay
                                                     loop
                                                     muted
@@ -61,15 +61,15 @@ const What: React.FC<TWhat> = () => {
                                         {photoVideo.slice(2, 4).map((videoPhoto: IphotoVideo, index: number) => (
                                             <div
                                                 className="photo"
-                                                key={index + 2}  
+                                                key={index + 2}
                                                 onMouseEnter={() => handleMouseEnter(index + 2)}
                                                 onMouseLeave={handleMouseLeave}
                                             >
                                                 {hoveredIndex === index + 2 ? (
                                                     <video
                                                         src={VideoOne}
-                                                         className='videoWhat'
-                                                         
+                                                        className='videoWhat'
+
                                                         autoPlay
                                                         loop
                                                         muted
@@ -90,8 +90,8 @@ const What: React.FC<TWhat> = () => {
                                             {hoveredIndex === 4 ? (
                                                 <video
                                                     src={VideoOne}
-                                                     className='videoWhat'
-                                                     
+                                                    className='videoWhat'
+
                                                     autoPlay
                                                     loop
                                                     muted

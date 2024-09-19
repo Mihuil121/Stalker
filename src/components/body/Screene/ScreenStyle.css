@@ -1,0 +1,31 @@
+.bac-Screen {
+    display: flex;
+    align-items: center;
+}
+
+.Screen-content {
+    display: flex;
+    align-items: center;
+}
+
+.screen-text {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.textS {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.bac{
+    background: url('../../../img/bg-media.jpg');
+}
