@@ -1,5 +1,7 @@
 .Heart {
     background: url('../../../img/bg.webp');
+    background-size: cover;
+    background-position: center;
 }
 
 .mainH {
@@ -24,7 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .textH {
@@ -33,17 +35,17 @@
 
 }
 
-.video{
+.video {
     width: 35rem;
     margin-left: 5rem;
     margin-bottom: 4rem;
 }
 
-.popi{
+.popi {
     width: 50rem;
 }
 
-.SignalSi{
+.SignalSi {
     display: flex;
     justify-content: center;
     align-items: center;

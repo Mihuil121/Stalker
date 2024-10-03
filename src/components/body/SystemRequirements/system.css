@@ -1,0 +1,11 @@
+.bac2 {
+    background: url('../../../img/bg.webp');
+    background-size: cover;
+}
+
+.SystemRequirements {
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+}

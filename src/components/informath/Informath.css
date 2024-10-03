@@ -1,0 +1,90 @@
+.divflex-in {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.flexim {
+    display: flex;
+    align-items: center;
+}
+
+.leftInfomath{
+    margin-right: 5rem;
+}
+
+.INFORMH2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    /* Промежуток между карточками */
+    width: 100%;
+    max-width: 75rem;
+    /* Максимальная ширина для контейнера */
+}
+
+.card {
+    background-color: #2a2a2a;
+    border: 1px solid white;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 25rem;
+}
+
+.card div {
+    margin-bottom: 1.5rem;
+}
+
+.card strong {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    display: block;
+    color: #e6e6e6;
+}
+
+.card p,
+.card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #cccccc;
+    font-size: 0.9rem;
+
+}
+
+.card ul {
+    list-style-type: disc;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.itemImage {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.card img {
+    margin-bottom: 1.5rem;
+}
+
+.podtext {
+    display: flex;
+    flex-wrap: wrap;
+}

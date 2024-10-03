@@ -5,6 +5,7 @@ import Heart from './components/body/Heart/Heart.tsx';
 import What from './components/body/What/What.tsx';
 import Screen from './components/body/Screene/Screen.tsx';
 import TextScreen from './components/body/Screene/TextScreen.tsx';
+import { SystemRequirements } from './components/body/SystemRequirements/SystemRequirements.tsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Heart />
       <What />
       <TextScreen />
+      <SystemRequirements />
     </div>
   );
 }

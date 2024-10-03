@@ -2,15 +2,15 @@ import photo from '../../img/Untitled.svg'
 import photo1 from '../../img/controller.svg'
 import photo2 from '../../img/multiplayer.svg'
 
-interface IInformation {
+export interface IInformation {
     text: string,
     podText?: string
 }
-interface IGameplay {
+export interface IGameplay {
     text: string,
     img?: string
 }
-interface ILocalization {
+export interface ILocalization {
     text: string,
     podtext?: {
         languageEN: string,
@@ -36,7 +36,7 @@ interface ILocalization {
 }
 
 
-const minimum: IInformation[] = [
+export const minimum: IInformation[] = [
     {
         text: `Минимальные`
     }, {
@@ -58,7 +58,7 @@ const minimum: IInformation[] = [
 
 ]
 
-const Recommended: IInformation[] = [
+export const Recommended: IInformation[] = [
     {
         text: `Рекомендуемые:`
     }, {
@@ -79,7 +79,7 @@ const Recommended: IInformation[] = [
     },
 ]
 
-const Gameplay: IGameplay[] = [
+export const Gameplay: IGameplay[] = [
     {
         text: `Геймплей:`
     }, {
@@ -94,7 +94,7 @@ const Gameplay: IGameplay[] = [
     },
 ]
 
-const Localization: ILocalization[] = [
+export const Localization: ILocalization[] = [
     {
         text: 'Локализация:'
     }, {

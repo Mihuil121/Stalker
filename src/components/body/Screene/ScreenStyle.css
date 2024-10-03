@@ -26,6 +26,8 @@
     line-height: 1;
 }
 
-.bac{
+.bac {
     background: url('../../../img/bg-media.jpg');
+    background-size: cover;
+
 }
