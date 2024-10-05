@@ -7,6 +7,7 @@ import What from './components/body/What/What.tsx';
 import Screen from './components/body/Screene/Screen.tsx';
 import TextScreen from './components/body/Screene/TextScreen.tsx';
 import { SystemRequirements } from './components/body/SystemRequirements/SystemRequirements.tsx';
+import './adaption/adaption.css'
 
 function App() {
   const explanationRef = useRef(null)

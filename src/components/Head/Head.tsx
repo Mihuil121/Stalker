@@ -83,7 +83,7 @@ const Head: React.FC<HeadProps> = ({
                             </div>
                         ))}
                     </div>
-                    <div className="scrol" style={{ color: 'white', cursor: 'pointer' }}>
+                    <div className="scrol" style={{ color: 'white',  }}>
                         <p className='text-head' onClick={() => scrollToSection(explanationRef)}>О Зоне</p>
                         <p className='text-head' onClick={() => scrollToSection(heartRef)}>Суть игры</p>
                         <p className='text-head' onClick={() => scrollToSection(whatRef)}>Взгляд изнутри</p>

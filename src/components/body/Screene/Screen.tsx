@@ -43,7 +43,8 @@ const Screen: React.FC<TScreen> = () => {
                                 ref={imageRef} 
                                 src={photo.screen}
                                 alt=""
-                                onClick={() => handleClick(photo.screen)} 
+                                onClick={() => handleClick(photo.screen)}
+                                className='photo131' 
                             />
                         </SwiperSlide>
                     ))}
