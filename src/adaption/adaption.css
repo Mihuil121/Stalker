@@ -470,14 +470,14 @@
     }
 
     .bacgraundW {
-        background: url(http://localhost:3000/static/media/bg.009aee91677edc3036b7.jpg);
+        background: url('../img/bg.jpg');
         background-position-x: 0%;
         background-position-y: 0%;
         background-size: auto;
         background-size: cover;
         background-position: center;
         padding: 2rem;
-        
+        margin-top: -1rem;
     }
 }
 
